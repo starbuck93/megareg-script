@@ -1,18 +1,18 @@
 Getting set up:
 
-`cd megareg-script/`
-`nano .account`
+$ cd megareg-script/
+$nano .account
 
 .account:
-``
+<--->
 EMAILDOMAIN="testing.com"
-PASSWORD="^d76`cR}%)/(j'PW"
-``
+PASSWORD="p@ssw0rd!"
+<--->
 
 
-`nano megarc/storageTest`
+$ nano megarc/storageTest
 
-Add the email domain and password as inputted in `.account`.
+Add the email domain and password as inputted in .account
 
 
-Set up a mail server on your server.
+Set up a mail server on your server for full automation
