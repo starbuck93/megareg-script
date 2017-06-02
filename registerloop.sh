@@ -5,6 +5,6 @@ if [ $# -ne 2 ]; then
 fi
 for ((i=$1;i < $2;i++))
 {
-/home/ubuntu/megareg-script/register.sh $i
+register.sh $i
 }
 exit 0
