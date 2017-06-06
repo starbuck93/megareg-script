@@ -1,4 +1,3 @@
 [Login]
-Username = storageTEST@EMAILDOMAIN
-Password = PASSWORD
-
+Username = storageTEST@FQDN.com
+Password = P@ssw0rd

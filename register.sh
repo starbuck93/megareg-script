@@ -6,19 +6,19 @@ fi
 
 source .account
 
-echo "Registering storage$1@$EMAILDOMAIN"
-CONFIRM="$(megareg --scripted --register --email storage"$1"@$EMAILDOMAIN --name user name --password $PASSWORD)"
+echo "Registering mega$1@$EMAILDOMAIN"
+CONFIRM="$(megareg --scripted --register --email mega"$1"@$EMAILDOMAIN --name user name --password $PASSWORD)"
 #echo "megareg run"
 echo "$CONFIRM" >> megarc/links
 cp megarc/storageTest megarc/storage"$1"
 sed -i "s/TEST/$1/g" megarc/storage"$1"
-sleep 1
+sleep 2
 LINK="$(php getLink.php $1)"
 while [ "$LINK" = "0" ]
 do
-	echo "Not yet"
+	echo "waiting for email..."
 	sleep 1
-	LINK="$(php getLink.php)"
+	LINK="$(php getLink.php $1)"
 	echo ">$LINK<"
 done
 
@@ -30,6 +30,6 @@ echo $link3 >> megarc/links
 #read asdf
 sleep 1
 #echo "truncating..."
-truncate -s 0 /var/mail/user
+truncate -s 0 /var/mail/ubuntu
 sleep 1
 echo "   > Registered $1..."
